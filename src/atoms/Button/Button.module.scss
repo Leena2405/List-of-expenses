@@ -1,0 +1,11 @@
+.element {
+	background-color: red;
+	&.hasColor {
+		&-green {
+			background-color: green;
+		}
+		&-red {
+			background-color: red;
+		}
+	}
+}
