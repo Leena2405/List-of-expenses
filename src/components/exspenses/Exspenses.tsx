@@ -11,12 +11,13 @@ const Exspenses: FC = () => {
 				initialValues={{ title: '1', amount: '222' }}
 				onSubmit={values => {
 					console.log(values)
+					//tutaj dispach action with data
 				}}>
-				{({ handleSubmit, values, handleChange}) => (
+				{({ handleSubmit, values, handleChange }) => (
 					<form onSubmit={handleSubmit}>
-						<Field  onChange={handleChange} component={TextInput} name={'title'} value={values.title} />
+						<Field onChange={handleChange} component={TextInput} name={'title'} value={values.title} />
 						<Field onChange={handleChange} component={TextInput} name={'amount'} value={values.amount} />
-                        <Button type='submit' color={'red'} text='Add'  />
+						<Button type='submit' color={'red'} text='Add' />
 					</form>
 				)}
 			</Formik>

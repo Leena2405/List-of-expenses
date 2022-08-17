@@ -5,11 +5,24 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 import './assets/styles/global.scss'
+import { Provider } from 'react-redux'
+
+import { configureStore } from '@reduxjs/toolkit'
+import { rootReducer } from './store/index'
+
+const store = configureStore({
+	reducer: rootReducer,
+	devTools: true, //process.env.NODE_ENV !== 'production'
+})
+
+export type AppDispatch = typeof store.dispatch
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
 	<React.StrictMode>
-		<App />
+		<Provider store={store}>
+			<App />
+		</Provider>
 	</React.StrictMode>
 )
 
