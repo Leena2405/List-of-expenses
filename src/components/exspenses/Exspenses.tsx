@@ -25,6 +25,8 @@ const Exspenses: FC = () => {
 			<TextInput placeholder='enter amount' />
 			<Button color={'red'} text='Add' onClick={() => console.log('Add')} />
 			<Button color={'green'} text='Delete' onClick={() => console.log('Delete')} /> */}
+
+			<div></div>
 		</>
 	)
 }
