@@ -27,6 +27,7 @@ const Exspenses: FC = () => {
 			<Button color={'green'} text='Delete' onClick={() => console.log('Delete')} /> */}
 
 			<div></div>
+			<div></div>
 		</>
 	)
 }
