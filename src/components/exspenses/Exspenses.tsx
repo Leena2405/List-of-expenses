@@ -28,7 +28,7 @@ const Exspenses: FC = () => {
 
 			<div></div>
 			<div></div>
-			<div>test</div>
+			<div>test1</div>
 		</>
 	)
 }
