@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Table from "./atoms/Table/Table";
 
 import Exspenses from './components/exspenses/Exspenses'
 import { useAppSelector } from './store'
@@ -23,20 +24,22 @@ const customButtonData = [
 ]
 
 const App: FC = () => {
-	const test = useAppSelector(state => state.exspenses.listExspenses)
-	console.log(test)
+
+
 	return (
 		<>
 			<Exspenses />
 			{/* budowanie komponentów reuzywalnych, przekazywanie tekstu i np kolory, na samej tablicy i na tablicy z obiektami */}
-			{buttonData.map(element => (
-				<Button text={element} />
+			{buttonData.map((element,index) => (
+			<React.Fragment key={index}>
+					<Button text={element}  />
+					<Button text={element}  />
+				</React.Fragment>
+
+
 			))}
-			{customButtonData.map(element => (
-				<Button text={element.text} color={element.color} />
-			))}
-			<NavLink to={'/test'}>test</NavLink>
-			<Link to='/invoices'>Invoices</Link> | <Link to='/expenses'>Expenses</Link>
+
+
 		</>
 	)
 }
